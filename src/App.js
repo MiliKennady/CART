@@ -1,9 +1,15 @@
-
-import './App.css';
+import React from "react";
+import CartItem from "./CartItem";
 
 function App() {
   return (
-    <h1>Cart</h1>
+    <div className="App">
+
+        
+        <CartItem></CartItem>
+
+    </div>
+    
   );
 }
 
