@@ -1,6 +1,6 @@
 import React from "react";   // import react from the react package
 
-class CartItem extends React.Component{
+const CartItem = (props) => {
 
     // constructor (){
     //     super(); //calls the constructor of the parent class, here the Componet class constructor
@@ -41,16 +41,16 @@ class CartItem extends React.Component{
     //     });
     // }
 
-    render(){
+    
 
         // {/*Object Destructuring */}
         // const {price, title, qty} = this.state;  //this is the state that we set in the constructor
-        const {price, title, qty} = this.props.product ; //getting value from props which was passed from the Cart.js
-        const {product, onIncreaseQuantity, onDecreaseQuantity, onDelete} = this.props;
+        const {price, title, qty, img} = props.product ; //getting value from props which was passed from the Cart.js
+        const {product, onIncreaseQuantity, onDecreaseQuantity, onDelete} =props;
         return(
             <div className ="cart-item"> 
                 <div className="left-block">
-                    <img style={ styles.image} />
+                    <img style={ styles.image} src ={img}/>
                 </div>
 
                 <div className="right-block">
@@ -94,7 +94,7 @@ class CartItem extends React.Component{
 
         );
     }
-}
+
 
 //adding styles using class
 
